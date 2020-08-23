@@ -2,14 +2,28 @@
 <html>
 <body>
 
-<h1>My First Web Page</h1>
-<p>My First Paragraph</p>
+<h1>Display Radio Buttons</h1>
 
-<p id="demo"></p>
+<form action="/action_page.php">
+  <p>Question 1:</p>
+  <input type="radio" id="male" name="q1" value="l">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="q1" value="r">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="q1" value="m">
+  <label for="other">Other</label>
 
-<script>
-document.getElementById("demo").innerHTML = 5 + 6;
-</script>
+  <br>  
+
+  <p>Please select your age:</p>
+  <input type="radio" id="age1" name="q2" value="l">
+  <label for="age1">0 - 30</label><br>
+  <input type="radio" id="age2" name="q2" value="r">
+  <label for="age2">31 - 60</label><br>  
+  <input type="radio" id="age3" name="q2" value="m">
+  <label for="age3">61 - 100</label><br><br>
+  <input type="submit" value="Submit">
+</form>
 
 </body>
-</html> 
+</html>
