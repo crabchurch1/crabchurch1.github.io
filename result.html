@@ -14,7 +14,8 @@
       var i;
       var pair;
       var query = window.location.search.substring(1);
-      var vars = query.split("&").split(",");
+      var varst = query.split("&");
+      var vars = varst.split(",");
       document.getElementById("demo").innerHTML = String(query);
       document.getElementById("demo").innerHTML = String(vars);
       
