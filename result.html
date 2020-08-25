@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>  
+  <head>
+<style>
+.dot {
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    border: 2px solid red;
+    z-index: 10;
+}
+</style>
+</head>
   
-<p id="demo"></p>
+<body>  
+
+<div style='position:relative' id='wrapper'>
+    <img src='triangle.png'>
+</div>
   
   <script>
       var x;
@@ -28,7 +42,6 @@
         }
       }
       
-      document.getElementById("demo").innerHTML = "test7.";
       x = 411 + (371 * lr / vars.length);
       y = 647 - (642 * up / vars.length);
    
@@ -40,19 +53,6 @@
     document.getElementById('wrapper').appendChild(div); 
 
   </script>
-  
-.dot {
-    height: 2px;
-    width: 2px;
-    position: absolute;
-    border: 2px solid red;
-    z-index: 10;
-}
-
-<div style='position:relative' id='wrapper'>
-    <img src='triangle.png'>
-</div>
-  
   
 </body>
 </html>
