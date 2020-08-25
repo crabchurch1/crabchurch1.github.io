@@ -16,7 +16,7 @@
       var query = window.location.search.substring(1);
       document.getElementById("demo").innerHTML = String(query);
       var vars = query.split("&");
-      document.getElementById("demo").innerHTML = String(vars[3]);
+      document.getElementById("demo").innerHTML = String(vars.length());
       
       for (i = 0; i < vars.length(); i++) {
         document.getElementById("demo").innerHTML = "test3.";
