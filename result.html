@@ -14,9 +14,10 @@
       var i;
       var pair;
       var query = window.location.search.substring(1);
-      var varst = query.split("&");
-      var vars = varst.split(",");
       document.getElementById("demo").innerHTML = String(query);
+      var varst = query.split("&");
+      document.getElementById("demo").innerHTML = String(varst);
+      var vars = varst.split(",");
       document.getElementById("demo").innerHTML = String(vars);
       
       for (i = 0; i < vars.length(); i++) {
