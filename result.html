@@ -32,8 +32,26 @@
       x = 411 + (371 * lr / vars.length);
       y = 647 - (642 * up / vars.length);
    
-      document.getElementById("demo").innerHTML = String(lr);
+
+    var div = document.createElement('div');
+    div.className = 'dot';
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
+    document.getElementById('wrapper').appendChild(div); 
+
   </script>
+  
+.dot {
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    border: 2px solid red;
+    z-index: 10;
+}
+
+<div style='position:relative' id='wrapper'>
+    <img src='triangle.png'>
+</div>
   
   
 </body>
