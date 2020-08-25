@@ -153,55 +153,9 @@ Pick the option that you most agree with:
   <br>
   <br>
   
+    <input type="submit" value="Submit" action="result.html">
+  
   </form>
-  
-    <input type="button" id="fin" value="Submit" onclick="finished()">
-  
-  <script>
-      
-    function finished() {
-      var x;
-      var y;
-      var lr = 0;
-      var up = 0;
-      var i;
-      var a = new Array("","","","","","","","","","","","","","");
-      
-      var a[0] = document.getElementsByName("q1");
-      var a[1] = document.getElementsByName("q2");
-      var a[2] = document.getElementsByName("q3");
-      var a[3] = document.getElementsByName("q4");
-      var a[4] = document.getElementsByName("q5");
-      var a[5] = document.getElementsByName("q6");
-      var a[6] = document.getElementsByName("q7");
-      var a[7] = document.getElementsByName("q8");
-      var a[8] = document.getElementsByName("q9");
-      var a[9] = document.getElementsByName("q10");
-      var a[10] = document.getElementsByName("q11");
-      var a[11] = document.getElementsByName("q12");
-      var a[12] = document.getElementsByName("q13");
-      var a[13] = document.getElementsByName("q14");
-      
-      for (i = 0; i < a.length(); i++) {
-        switch(a[i]) {
-          case "r":
-            lr++;
-            up++;
-            break;
-          case "l":
-            lr--;
-            up++;
-            break;
-        }
-      }
-      
-      x = 411 + (371 * lr / a.length());
-      y = 647 - (642 * up / a.length());
-      
-      window.location.href = "result.html";
-      
-    }
-  </script>
 
 </body>
 </html>
