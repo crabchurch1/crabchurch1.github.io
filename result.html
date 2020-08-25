@@ -18,13 +18,17 @@
       document.getElementById("demo").innerHTML = "test2 ";
       
       for (i = 0; i < vars.length(); i++) {
+        document.getElementById("demo").innerHTML = "test3.";
         pair = vars[i].split("=");
+        document.getElementById("demo").innerHTML = "test4.";
         switch(pair[1]) {
           case "r":
+            document.getElementById("demo").innerHTML = "test5";
             lr++;
             up++;
             break;
           case "l":
+            document.getElementById("demo").innerHTML = "test6.";
             lr--;
             up++;
             break;
@@ -34,7 +38,7 @@
       x = 411 + (371 * lr / a.length());
       y = 647 - (642 * up / a.length());
    
-      document.getElementById("demo").innerHTML = "test3.";
+      document.getElementById("demo").innerHTML = "test9999.";
   </script>
   
   
