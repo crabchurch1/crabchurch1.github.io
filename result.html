@@ -15,9 +15,8 @@
       var pair;
       var query = window.location.search.substring(1);
       document.getElementById("demo").innerHTML = String(query);
-      var varst = query.split("&");
-      var vars = varst[1].split(",");
-      document.getElementById("demo").innerHTML = String(varst[0]);
+      var vars = query.split("&");
+      document.getElementById("demo").innerHTML = String(vars[3]);
       
       for (i = 0; i < vars.length(); i++) {
         document.getElementById("demo").innerHTML = "test3.";
