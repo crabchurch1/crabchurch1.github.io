@@ -18,12 +18,10 @@
         pair = vars[i].split("=");
         switch(pair[1]) {
           case "r":
-            document.getElementById("demo").innerHTML = "test5";
             lr++;
             up++;
             break;
           case "l":
-            document.getElementById("demo").innerHTML = "test6.";
             lr--;
             up++;
             break;
@@ -31,10 +29,10 @@
       }
       
       document.getElementById("demo").innerHTML = "test7.";
-      x = 411 + (371 * lr / a.length);
-      y = 647 - (642 * up / a.length);
+      x = 411 + (371 * lr / vars.length);
+      y = 647 - (642 * up / vars.length);
    
-      document.getElementById("demo").innerHTML = String(x);
+      document.getElementById("demo").innerHTML = String(lr);
   </script>
   
   
