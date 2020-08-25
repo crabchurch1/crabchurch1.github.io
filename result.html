@@ -5,8 +5,6 @@
 <p id="demo"></p>
   
   <script>
-      document.getElementById("demo").innerHTML = "test1 ";
-
       var x;
       var y;
       var lr = 0;
@@ -14,14 +12,10 @@
       var i;
       var pair;
       var query = window.location.search.substring(1);
-      document.getElementById("demo").innerHTML = String(query);
       var vars = query.split("&");
-      document.getElementById("demo").innerHTML = String(vars.length);
       
       for (i = 0; i < vars.length; i++) {
-        document.getElementById("demo").innerHTML = "test3.";
         pair = vars[i].split("=");
-        document.getElementById("demo").innerHTML = "test4.";
         switch(pair[1]) {
           case "r":
             document.getElementById("demo").innerHTML = "test5";
@@ -36,11 +30,11 @@
         }
       }
       
-            document.getElementById("demo").innerHTML = "test7.";
-      x = 411 + (371 * lr / a.length());
-      y = 647 - (642 * up / a.length());
+      document.getElementById("demo").innerHTML = "test7.";
+      x = 411 + (371 * lr / a.length);
+      y = 647 - (642 * up / a.length);
    
-      document.getElementById("demo").innerHTML = "test9999.";
+      document.getElementById("demo").innerHTML = String(x);
   </script>
   
   
