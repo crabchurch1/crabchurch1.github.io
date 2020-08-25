@@ -10,10 +10,6 @@
     z-index: 10;
     opacity: 0.8;
 }
-  
-  p {
-   font-weight: bold;
-  }
 </style>
 </head>
   
@@ -58,22 +54,22 @@
     document.getElementById('wrapper').appendChild(div); 
     
     if (l > 0.625337) {
-      document.getElementById("result").innerHTML = "revolutionary";
+      document.getElementById("result").innerHTML = "According to this test you are a <b>revolutionary</b>.";
     }
     else if (r > 0.625337) {
-      document.getElementById("result").innerHTML = "reactionary";
+      document.getElementById("result").innerHTML = "According to this test you are a <b>reactionary</b>.";
     }
     else if (y < 137) {
-      document.getElementById("result").innerHTML = "extremist";
+      document.getElementById("result").innerHTML = "According to this test you are an <b>extremist</b>.";
     }
     else if (x < 144) {
-      document.getElementById("result").innerHTML = "progressive";
+      document.getElementById("result").innerHTML = "According to this test you are a <b>progressive</b>.";
     }
     else if (x > 488) {
-      document.getElementById("result").innerHTML = "conservative";
+      document.getElementById("result").innerHTML = "According to this test you are a <b>conservative</b>.";
     }
     else if (y < 360) {
-      document.getElementById("result").innerHTML = "centrist";
+      document.getElementById("result").innerHTML = "According to this test you are a <b>centrist</b>.";
     }
     else {
       document.getElementById("result").innerHTML = "moderate/liberal";
@@ -81,7 +77,7 @@
 
   </script>
   <br>
-  According to this test you are a(n) <p id="result"></p> .
+  <p id="result"></p>
   <br><br>
   This test is still in development. Please send any critiques and criticisms to comments@whitehouse.gov
   <br>Saving the image does not work. You have to take a screenshot and crop the results.
