@@ -58,6 +58,9 @@ img {
     
     x2 = (x-10)/823*100*.99;
     y2 = ((y-10)/656*100)*.982;
+    
+    x3 = x-5;
+    y3 = y-5;
 
     var div = document.createElement('div');
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -68,8 +71,8 @@ img {
       div.style.top = y2 + '%';
     }    
     else {
-      div.style.left = Concat(String(x-5),'px');
-      div.style.top = Concat(String(y-5),'px');
+      div.style.left = x3 +'px';
+      div.style.top = y3 +'px';
     }
     document.getElementById('wrapper').appendChild(div); 
     
