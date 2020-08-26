@@ -3,10 +3,6 @@
   <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-img {
-  max-width: 100%;
-  height: auto;
-}
 .dot {
     height: 0px;
     width: 0px;
@@ -60,8 +56,8 @@ img {
 
     var div = document.createElement('div');
     div.className = 'dot';
-    div.style.left = x2 + '%';
-    div.style.top = y2 + '%';
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
     document.getElementById('wrapper').appendChild(div); 
     
     if (l/vars.length > 0.625337) {
