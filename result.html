@@ -59,9 +59,17 @@ img {
     y2 = ((y-10)/656*100)*.982;
 
     var div = document.createElement('div');
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     div.className = 'dot';
-    div.style.left = x2 + '%';
-    div.style.top = y2 + '%';
+    
+    if (width < 656) {
+      div.style.left = x2 + '%';
+      div.style.top = y2 + '%';
+    }    
+    else {
+      div.style.left = (x-5) + 'px';
+      div.style.top = (y-5) + 'px';
+    }
     document.getElementById('wrapper').appendChild(div); 
     
     if (l/vars.length > 0.625337) {
