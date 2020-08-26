@@ -55,10 +55,10 @@
     div.style.top = y + 'px';
     document.getElementById('wrapper').appendChild(div); 
     
-    if (l > 0.625337) {
+    if (l/vars.length > 0.625337) {
       document.getElementById("result").innerHTML = "According to this test you are a <b>revolutionary</b>.";
     }
-    else if (r > 0.625337) {
+    else if (r/vars.length > 0.625337) {
       document.getElementById("result").innerHTML = "According to this test you are a <b>reactionary</b>.";
     }
     else if (y < 137) {
