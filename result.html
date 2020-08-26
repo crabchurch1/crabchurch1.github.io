@@ -53,13 +53,13 @@ img {
       
       x = -5 + 411 + (371 * (r - l) / vars.length);
       y = -5 + 647 - (642 * up / vars.length);
-    x2 = (r - l) / vars.length
-    y2 = up / vars.length
+    x2 = (r - l) / vars.length*100
+    y2 = up / vars.length*100
 
     var div = document.createElement('div');
     div.className = 'dot';
-    div.style.left = x2 + '%';
-    div.style.top = y2 + '%';
+    div.style.left = x + '%';
+    div.style.top = y + '%';
     document.getElementById('wrapper').appendChild(div); 
     
     if (l/vars.length > 0.625337) {
