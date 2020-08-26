@@ -53,8 +53,9 @@ img {
         }
       }
       
-      x = 411 + (371 * (r - l) / vars.length);
-      y = 647 - (642 * up / vars.length);
+    x = 411 + (371 * (r - l) / vars.length);
+    y = 647 - (642 * up / vars.length);
+    
     x2 = (x-10)/823*100*.982;
     y2 = ((y-10)/656*100)*.982;
 
@@ -67,8 +68,8 @@ img {
       div.style.top = y2 + '%';
     }    
     else {
-      div.style.left = (x-5) + 'px';
-      div.style.top = (y-5) + 'px';
+      div.style.left = Concat(String(x-5),'px');
+      div.style.top = Concat(String(y-5),'px');
     }
     document.getElementById('wrapper').appendChild(div); 
     
