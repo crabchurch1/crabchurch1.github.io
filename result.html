@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+.dot {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    border: 5px solid red;
+    z-index: 10;
+    opacity: 0.8;
+}
+</style>
+</head>
+  
+<body>  
+
+<div style='position:relative' id='wrapper'>
+    <img src='triangle.png'>
+</div>
+  <br>
+  <p id="result"></p>
+  
+  <script>
+      var x;
+      var y;
+      var x2;
+      var y2;
+      var l = 0;
+      var r = 0;
+      var up = 0;
+      var i;
+      var pair;
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      
+      for (i = 0; i < vars.length; i++) {
+        pair = vars[i].split("=");
+        switch(pair[1]) {
+          case "r":
+            r++;
+            up++;
+            break;
+          case "l":
+            l++;
+            up++;
+            break;
+        }
+      }
+      
+    x = 411 + (371 * (r - l) / vars.length);
+    y = 647 - (642 * up / vars.length);
+    
+    x2 = (x-3)/823*100*.985;
+    y2 = ((y-10)/656*100)*.982;
+    
+    x3 = x-5;
+    y3 = y-5;
+
+    var div = document.createElement('div');
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    div.className = 'dot';
+    
+    if (width < 656) {
+      div.style.left = x2 + '%';
+      div.style.top = y2 + '%';
+    }    
+    else {
+      div.style.left = x3 +'px';
+      div.style.top = y3 +'px';
+    }
+    document.getElementById('wrapper').appendChild(div); 
+    
+    if (l/vars.length > 0.625337) {
+      document.getElementById("result").innerHTML = "According to this test you are a <b>revolutionary</b>.";
+    }
+    else if (r/vars.length > 0.625337) {
+      document.getElementById("result").innerHTML = "According to this test you are a <b>reactionary</b>.";
+    }
+    else if (y < 137) {
+      document.getElementById("result").innerHTML = "According to this test you are an <b>extremist</b>.";
+    }
+    else if (x < 144) {
+      document.getElementById("result").innerHTML = "According to this test you are a <b>progressive</b>.";
+    }
+    else if (x > 488) {
+      document.getElementById("result").innerHTML = "According to this test you are a <b>conservative</b>.";
+    }
+    else if (y < 360) {
+      document.getElementById("result").innerHTML = "According to this test you are a <b>radical centrist</b>.";
+    }
+    else {
+      document.getElementById("result").innerHTML = "According to this test you are a <b>liberal/moderate</br>";
+    }
+
+  </script>
+  This test is still in development. Please send any critiques and criticisms to comments@whitehouse.gov
+  <br>Saving the image does not work. You have to take a screenshot and crop the results.
+  <br>Hi Der Server.
+  
+</body>
+</html>
