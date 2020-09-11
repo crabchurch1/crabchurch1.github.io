@@ -33,6 +33,8 @@ img {
       var y2;
       var rawx;
       var rawy;
+      var maxrawx;
+      var maxrawy;
       var sl = 0;
       var sr = 0;
       var sc = 0;
@@ -86,13 +88,14 @@ img {
         }
       }
     
-    rawx = r - l;
-    rawy = (vars.length / 3 - Math.abs(l - r)) - c;
-    rawy /= 2;
-    rawx /= 2;
+    rawx = Math.sqrt(3)/2*((3/2)*r-(3/2)*l);
+    rawy = ((1+ Math.sqrt(3) / 2)*(l+r) - c;
+            
+    maxrawx= Math.sqrt(3)/2 * 3 * vars.length;
+    maxrawy = (((1 + Math.sqrt(3))/2)*2*vars.length)+vars.length;
       
-    x = 411 + (371 * rawx / vars.length);
-    y = 323 - (323 * rawy / vars.length);
+    x = 411 + (371 * rawx/maxrawx);
+    y = 323 - (323 * rawy/maxrawy);
     
     x2 = (x-3)/823*100*.985;
     y2 = ((y-10)/656*100)*.982;
