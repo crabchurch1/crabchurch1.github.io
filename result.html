@@ -31,9 +31,14 @@ img {
       var y;
       var x2;
       var y2;
-      var l = 0;
+      var rawx;
+      var rawy;
+      var sl = 0;
+      var sr = 0;
+      var sc = 0;
       var r = 0;
-      var up = 0;
+      var l = 0;
+      var c = 0;
       var i;
       var pair;
       var query = window.location.search.substring(1);
@@ -42,19 +47,51 @@ img {
       for (i = 0; i < vars.length; i++) {
         pair = vars[i].split("=");
         switch(pair[1]) {
-          case "r":
-            r++;
-            up++;
+          case "ra":
+            r -= 3;
             break;
-          case "l":
-            l++;
-            up++;
+          case "rb":
+            r -= 2;
+            break;
+          case "rd":
+            r += 2;
+            break;
+          case "re":
+            r += 3;
+            break;
+          case "la":
+            l -= 3;
+            break;
+          case "lb":
+            l -= 2;
+            break;
+          case "ld":
+            l += 2;
+            break;
+          case "le":
+            l += 3;
+            break;
+          case "ca":
+            c -= 3;
+            break;
+          case "cb":
+            c -= 2;
+            break;
+          case "cd":
+            c += 2;
+            break;
+          case "ce":
+            c += 3;
             break;
         }
       }
+    
+    rawx = r - l;
+    rawy = (vars.length / 3 - Math.abs(l - r)) - c;
+    rawy /= 2;
       
-    x = 411 + (371 * (r - l) / vars.length);
-    y = 647 - (642 * up / vars.length);
+    x = 411 + (371 * rawx / vars.length);
+    y = 323 - (323 * rawy / vars.length);
     
     x2 = (x-3)/823*100*.985;
     y2 = ((y-10)/656*100)*.982;
