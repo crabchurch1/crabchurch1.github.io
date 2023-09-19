@@ -27,6 +27,7 @@ img {
   <p id="result"></p>
   
   <script>
+    document.write("0<br>");
       var x;
       var y;
       var x2;
@@ -46,7 +47,7 @@ img {
       var query = window.location.search.substring(1);
       var vars = query.split("&");
       
-    document.write("1<br>");
+      document.write("1<br>");
     
       for (i = 0; i < vars.length; i++) {
         pair = vars[i].split("=");
