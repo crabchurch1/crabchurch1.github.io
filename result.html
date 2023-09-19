@@ -118,6 +118,11 @@ img {
     rawx = ((Math.min(-1*l,0)+Math.max(r,0))*Math.min((90-c)/90,1)+45)/90;
     rawy = (Math.max(0,l,r)-Math.max(0,c)+45)/90;
     
+    document.write(rawx);
+    document.write("<br>");
+    document.write(rawy);
+    document.write("<br>");
+    
     x = 411 + (371 * rawx);
     y = 323 - (323 * rawy);
     
