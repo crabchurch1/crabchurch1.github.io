@@ -27,7 +27,6 @@ img {
   <p id="result"></p>
   
   <script>
-    document.write("0<br>");
       var x;
       var y;
       var x2;
@@ -46,8 +45,6 @@ img {
       var pair;
       var query = window.location.search.substring(1);
       var vars = query.split("&");
-      
-      document.write("1<br>");
     
       for (i = 0; i < vars.length; i++) {
         pair = vars[i].split("=");
@@ -90,21 +87,20 @@ img {
             break;
         }
       }
-    document.write("2<br>");
     
     rawx = Math.sqrt(3)/2*((3/2)*r-(3/2)*l);
-    document.write(rawx);
-    document.write("<br>");
+    //document.write(rawx);
+    //document.write("<br>");
     rawy = ((1+ Math.sqrt(3) / 2)*(l+r) - c);
-    document.write(rawy);
-    document.write("<br>");
+    //document.write(rawy);
+    //document.write("<br>");
             
     maxrawx= Math.sqrt(3)/2 * 3 * vars.length;
-    document.write(maxrawx);
-    document.write("<br>");
+    //document.write(maxrawx);
+    //document.write("<br>");
     maxrawy = (((1 + Math.sqrt(3))/2)*2*vars.length)+vars.length;
-    document.write(maxrawy);
-    document.write("<br>");
+    //document.write(maxrawy);
+    //document.write("<br>");
       
     //x = 411 + (371 * rawx/maxrawx);
     //y = 323 - (323 * rawy/maxrawy);
