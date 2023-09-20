@@ -107,22 +107,22 @@ img {
     document.write(c);
     document.write("<br>");
     
-    rawx = Math.sqrt(3)/2*((3/2)*r-(3/2)*l);
+    rawx = r-l;
     document.write(rawx);
     document.write("<br>");
-    rawy = ((1+ Math.sqrt(3) / 2)*(l+r) - c)+90;
+    rawy = (Math.sqrt(3)/2)*(l+r)-c
     document.write(rawy);
     document.write("<br>");
             
-    maxrawx= Math.sqrt(3)/2 * 6 * vars.length;
+    maxrawx= 2 * vars.length;
     document.write(maxrawx);
     document.write("<br>");
-    maxrawy = ((1+ Math.sqrt(3) / 2)*(6*vars.length+6*vars.length) + 6*vars.length)+90;
+    maxrawy = (Math.sqrt(3)/2)*(2 * vars.length)-vars.length
     document.write(maxrawy);
     document.write("<br>");
     
     x = 411 + (371 * rawx/maxrawx);
-    y = 649 - (645 * rawy/maxrawy);
+    y = 323 - (323 * rawy/maxrawy);
 
     //rawx = ((Math.min(-1*l,0)+Math.max(r,0))*Math.min((90-c)/90,1)+45)/90;
     //rawy = (Math.max(0,l,r)-Math.max(0,c)+45)/90;
